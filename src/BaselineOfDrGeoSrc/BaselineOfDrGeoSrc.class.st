@@ -21,10 +21,12 @@ BaselineOfDrGeoSrc class >> loadLepiter [
 
 { #category : #baseline }
 BaselineOfDrGeoSrc >> baseline: spec [
+	"NB: There are too many missing methods in the dummy classes to be able to load anything."
+
 	<baseline>
-		^ spec for: #common do: [
-			spec package: 'DrGeoSrc'.
-			spec package: 'DrGeo'.
+	^ spec
+		for: #common
+		do: [ spec package: 'DrGeoSrc'	"spec package: 'DrGeo'.
 			spec package: 'DrGeo-Factories'.
 			spec package: 'DrGeo-File'.
 			spec package: 'DrGeo-Missing'.
@@ -32,6 +34,5 @@ BaselineOfDrGeoSrc >> baseline: spec [
 			spec package: 'DrGeo-Presenter'.
 			spec package: 'DrGeo-System'.
 			spec package: 'DrGeo-Test'.
-			spec package: 'DrGeo-View'.
-		]
+			spec package: 'DrGeo-View'." ]
 ]
