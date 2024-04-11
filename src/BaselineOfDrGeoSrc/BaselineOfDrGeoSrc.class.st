@@ -19,6 +19,16 @@ BaselineOfDrGeoSrc class >> loadLepiter [
 			self inform: 'Repository not found.' ]
 ]
 
+{ #category : #loading }
+BaselineOfDrGeoSrc class >> loadPackages [
+	IceRepository registry
+		detect: [ :aRepository | aRepository name = 'DrGeoSrc' ]
+		ifFound: [ :aRepository | 
+			(aRepository packages reject: #isLoaded) do: #load.
+			^ aRepository ]
+		ifNone: [ self inform: 'Repository not found.' ]
+]
+
 { #category : #baseline }
 BaselineOfDrGeoSrc >> baseline: spec [
 	"NB: There are too many missing methods in the dummy classes to be able to load anything."
