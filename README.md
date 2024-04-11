@@ -1,1 +1,2 @@
-## Installation```stMetacello new	repository: 'github://feenkcom/DrGeoSrc:master/src';	baseline: 'DrGeoSrc';	load```## Load Lepiter				After installing with Metacello, you will be able to execute```#BaselineOfDrGeoSrc asClass loadLepiter```
+## Installation```stMetacello new	repository: 'github://feenkcom/DrGeoSrc:master/src';	baseline: 'DrGeoSrc';	load.
+#BaselineOfDrGeoSrc asClass loadLepiter```
