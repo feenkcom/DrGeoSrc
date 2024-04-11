@@ -23,6 +23,15 @@ BaselineOfDrGeoSrc class >> loadLepiter [
 BaselineOfDrGeoSrc >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
-			spec package: 'DrGeoSrc'
+			spec package: 'DrGeoSrc'.
+			spec package: 'DrGeo'.
+			spec package: 'DrGeo-Factories'.
+			spec package: 'DrGeo-File'.
+			spec package: 'DrGeo-Missing'.
+			spec package: 'DrGeo-Model'.
+			spec package: 'DrGeo-Presenter'.
+			spec package: 'DrGeo-System'.
+			spec package: 'DrGeo-Test'.
+			spec package: 'DrGeo-View'.
 		]
 ]
